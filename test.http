@@ -9,3 +9,21 @@ GET http://localhost:8888/hello?name=oywz HTTP/1.1
 
 ### 
 GET http://localhost:8888/src/main.rs HTTP/1.1
+
+### 
+POST http://localhost:8888/api/login 
+Content-Type: application/json
+
+{
+    "username": "demo",
+    "pwd": "welcome"
+}
+
+### 
+POST http://localhost:8888/api/login 
+Content-Type: application/json
+
+{
+    "username": "demo",
+    "pwd": "welcome1"
+}

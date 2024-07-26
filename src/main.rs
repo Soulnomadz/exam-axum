@@ -6,6 +6,10 @@ use tracing::info;
 use serde::{Deserialize, Serialize};
 use tower_http::services::ServeDir;
 
+mod web;
+mod error;
+pub use self::error::{Error, Result};
+
 #[tokio::main]
 async fn main() {
     tracing_subscriber::fmt::init();
@@ -17,6 +21,7 @@ async fn main() {
 
     let app = Router::new()
         .merge(routes_hello())
+        .merge(web::routes_login::routes())
         .route("/user", post(create_user))
         .fallback_service(routes_static());
 
