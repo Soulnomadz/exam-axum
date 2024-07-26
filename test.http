@@ -1,0 +1,11 @@
+GET http://localhost:8888/hello HTTP/1.1
+
+
+### 
+GET http://localhost:8888/hello2/Mike HTTP/1.1
+
+###
+GET http://localhost:8888/hello?name=oywz HTTP/1.1
+
+### 
+GET http://localhost:8888/src/main.rs HTTP/1.1
